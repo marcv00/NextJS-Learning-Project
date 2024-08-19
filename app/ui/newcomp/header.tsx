@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const Header: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     // Initialize state based on localStorage
-    return localStorage.getItem("dark-mode") === "enabled";
+    return window.localStorage.getItem("dark-mode") === "enabled";
   });
 
   const toggleDarkMode = () => {
